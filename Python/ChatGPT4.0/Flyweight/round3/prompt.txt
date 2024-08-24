@@ -1,0 +1,1 @@
+Write python code use Flyweight pattern and write pytest to test that given code have 100% branch coverage
