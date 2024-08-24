@@ -1,6 +1,6 @@
 import pytest
 
-from code import Flyweight, FlyweightFactory
+from flyweight import Flyweight, FlyweightFactory
 
 def test_flyweight_operation():
     flyweight = Flyweight("shared_state")
