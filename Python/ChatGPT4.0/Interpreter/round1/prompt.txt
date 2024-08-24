@@ -1,0 +1,1 @@
+Use interpreter pattern to write code in python and write pytest to test given code that have 100% statement coverage.
