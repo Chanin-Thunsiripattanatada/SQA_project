@@ -1,0 +1,1 @@
+Write code Use the Flyweight pattern in Python And Write pytest to test that code have 100% statement coverage
