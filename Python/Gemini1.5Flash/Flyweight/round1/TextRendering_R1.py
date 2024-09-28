@@ -8,7 +8,7 @@ class Font(ABC):
 
 class SansSerifFont(Font):
     def render(self, text: str) -> str:
-        return f"<font face='sans-serif'>{text}</font>"
+        return f"<font face='sans-serif'>{text}</feont>"
 
 class SerifFont(Font):
     def render(self, text: str) -> str:

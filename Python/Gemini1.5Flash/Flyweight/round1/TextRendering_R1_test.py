@@ -1,6 +1,6 @@
 #unit_test
 import pytest
-from TextRendering import FontFactory, TextRenderer, TextStyle
+from TextRendering_R1 import FontFactory, TextRenderer, TextStyle
 
 @pytest.fixture
 def font_factory():
