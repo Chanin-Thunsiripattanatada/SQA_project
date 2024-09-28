@@ -1,12 +1,9 @@
-package Round1.src.test.java.com.example;
 
 import org.junit.jupiter.api.Test;
 
-import Round1.src.main.java.com.example.com.example.TextRenderingSystem;
-import Round1.src.main.java.com.example.com.example.TextRenderingSystem.TextRenderer;
+import TextRenderingSystem.TextRenderer;
 
 import java.awt.*;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 

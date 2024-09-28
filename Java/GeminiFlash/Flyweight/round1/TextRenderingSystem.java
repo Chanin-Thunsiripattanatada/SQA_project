@@ -1,5 +1,3 @@
-package Round1.src.main.java.com.example.com.example;
-
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -40,55 +38,37 @@ public class TextRenderingSystem {
             return text;
         }
 
-
-
         public void setText(String text) {
             this.text = text;
         }
-
-
 
         public void setFont(Font font) {
             this.font = font;
         }
 
-
-
         public Color getColor() {
             return color;
         }
-
-
 
         public void setColor(Color color) {
             this.color = color;
         }
 
-
-
         public TextAlignment getAlignment() {
             return alignment;
         }
-
-
 
         public void setAlignment(TextAlignment alignment) {
             this.alignment = alignment;
         }
 
-
-
         public float getLineSpacing() {
             return lineSpacing;
         }
 
-
-
         public float getLetterSpacing() {
             return letterSpacing;
         }
-
-
 
         public TextRenderer setLineSpacing(float lineSpacing) {
             this.lineSpacing = lineSpacing;
