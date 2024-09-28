@@ -1,5 +1,5 @@
 import pytest
-from text_rendering_system import FlyweightFactory, TextRenderer
+from TextRenderer_R3 import FlyweightFactory, TextRenderer
 
 @pytest.fixture
 def factory():

@@ -1,7 +1,6 @@
 import pytest
 
-from text_rendering import FontFactory, TextRenderer, MultilingualText, UnicodeText
-
+from TextRenderer_R2 import TextRenderer,FontFactory,MultilingualText,UnicodeText
 
 def test_font_factory():
     font1 = FontFactory.get_font("Serif", 12, "Bold", False)
