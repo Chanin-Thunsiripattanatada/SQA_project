@@ -1,3 +1,5 @@
+package flyweight_chatgpt4o_round1;
+
 import java.util.HashMap;
 import java.util.Map;
 
