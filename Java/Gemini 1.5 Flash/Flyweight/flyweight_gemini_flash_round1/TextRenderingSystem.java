@@ -1,95 +1,69 @@
 package flyweight_gemini_flash_round1;
 import java.awt.*;
 import java.util.HashMap;
-import java.util.Map;
 
-public class TextRenderingSystem {
+// Flyweight Factory for managing Font objects
+class FontFactory {
+    private static final HashMap<String, Font> fontCache = new HashMap<>();
 
-    private static final Map<String, Font> FONTS = new HashMap<>();
-
-    static {
-        FONTS.put("Sans-serif", new Font("Arial", Font.PLAIN, 12));
-        FONTS.put("Serif", new Font("Times New Roman", Font.PLAIN, 12));
-        FONTS.put("Monospace", new Font("Courier New", Font.PLAIN, 12));
-    }
-
-    private String text;
-    private Font font;
-    private Color color;
-    private int fontSize;
-    private int lineSpacing;
-    private int letterSpacing;
-    private TextAlign alignment;
-
-    public TextRenderingSystem(String text) {
-        this.text = text;
-        this.font = FONTS.get("Sans-serif");
-        this.color = Color.BLACK;
-        this.fontSize = 12;
-        this.lineSpacing = 0;
-        this.letterSpacing = 0;
-        this.alignment = TextAlign.LEFT;
-    }
-
-    public void setFont(String fontName) {
-        if (FONTS.containsKey(fontName)) {
-            this.font = FONTS.get(fontName);
-        } else {
-            this.font = FONTS.get("Sans-serif"); // Default to Sans-serif if font is not found
+    public static Font getFont(String fontFamily, int fontSize, boolean isBold, boolean isItalic) {
+        String fontKey = fontFamily + "|" + fontSize + "|" + isBold + "|" + isItalic;
+        if (!fontCache.containsKey(fontKey)) {
+            int fontStyle = Font.PLAIN;
+            if (isBold) {
+                fontStyle |= Font.BOLD;
+            }
+            if (isItalic) {
+                fontStyle |= Font.ITALIC;
+            }
+            fontCache.put(fontKey, new Font(fontFamily, fontStyle, fontSize));
         }
+        return fontCache.get(fontKey);
     }
+}
 
-    public void setFontSize(int fontSize) {
-        this.fontSize = fontSize;
-        this.font = this.font.deriveFont(fontSize);
-    }
+// Flyweight interface for text formatting options
+interface TextFormat {
+    void apply(Graphics g, String text, int x, int y);
+}
 
-    public void setColor(Color color) {
+// Concrete Flyweight for basic text formatting
+class BasicTextFormat implements TextFormat {
+    private final Font font;
+    private final Color color;
+
+    public BasicTextFormat(Font font, Color color) {
+        this.font = font;
         this.color = color;
     }
 
-    public void setAlignment(TextAlign alignment) {
-        this.alignment = alignment;
+    @Override
+    public void apply(Graphics g, String text, int x, int y) {
+        g.setFont(font);
+        g.setColor(color);
+        g.drawString(text, x, y);
     }
 
-    public void setLineSpacing(int lineSpacing) {
-        this.lineSpacing = lineSpacing;
+    public Font getFont() {
+        return font;
     }
 
-    public void setLetterSpacing(int letterSpacing) {
-        this.letterSpacing = letterSpacing;
+    public Color getColor() {
+        return color;
+    }
+    
+}
+
+// Context class holding extrinsic state and referencing Flyweight
+class TextRenderer {
+    private TextFormat textFormat;
+
+    public void setTextFormat(String fontFamily, int fontSize, boolean isBold, boolean isItalic, Color color) {
+        Font font = FontFactory.getFont(fontFamily, fontSize, isBold, isItalic);
+        this.textFormat = new BasicTextFormat(font, color);
     }
 
-    public void render(Graphics2D g2d, int x, int y) {
-        g2d.setColor(color);
-        g2d.setFont(font);
-
-        // Handle letter spacing
-        if (letterSpacing != 0) {
-            g2d.drawString(text, x, y);
-            return;
-        }
-
-        // Handle alignment
-        switch (alignment) {
-            case CENTER:
-                x -= g2d.getFontMetrics().stringWidth(text) / 2;
-                break;
-            case RIGHT:
-                x -= g2d.getFontMetrics().stringWidth(text);
-                break;
-            case JUSTIFY:
-                // Implement justify logic for text rendering
-                break;
-            default:
-                break;
-        }
-
-        // Draw the text
-        g2d.drawString(text, x, y);
-    }
-
-    public enum TextAlign {
-        LEFT, CENTER, RIGHT, JUSTIFY
+    public void renderText(Graphics g, String text, int x, int y) {
+        textFormat.apply(g, text, x, y);
     }
 }
