@@ -1,6 +1,9 @@
 {
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
-        "Java/ChatGPT4.0/Flyweight"
+        "Java/Gemini 1.5 Pro/Flyweight",
+        "Java/Gemini 1.5 Flash/Flyweight",
+        "Java/ChatGPT4.0/Flyweight",
+        "Java/GithubCopilot/Flyweight"
     ]
 }
