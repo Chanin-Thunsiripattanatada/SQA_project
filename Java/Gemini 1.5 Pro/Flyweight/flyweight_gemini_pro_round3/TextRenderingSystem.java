@@ -42,6 +42,55 @@ class ConcreteTextFormat implements TextFormat {
         }
         return style;
     }
+
+    public String getFontFamily() {
+        return fontFamily;
+    }
+
+    public void setFontFamily(String fontFamily) {
+        this.fontFamily = fontFamily;
+    }
+
+    public int getFontSize() {
+        return fontSize;
+    }
+
+    public void setFontSize(int fontSize) {
+        this.fontSize = fontSize;
+    }
+
+    public boolean isBold() {
+        return isBold;
+    }
+
+    public void setBold(boolean isBold) {
+        this.isBold = isBold;
+    }
+
+    public boolean isItalic() {
+        return isItalic;
+    }
+
+    public void setItalic(boolean isItalic) {
+        this.isItalic = isItalic;
+    }
+
+    public boolean isUnderline() {
+        return isUnderline;
+    }
+
+    public void setUnderline(boolean isUnderline) {
+        this.isUnderline = isUnderline;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+    
 }
 
 // Flyweight Factory

@@ -1,4 +1,4 @@
-Write a code that use Interpreter pattern with python that have requirement below
+Write a code that use Interpreter pattern with java that have requirement below
 1. การจัดการนิพจน์ทางคณิตศาสตร์พื้นฐาน:
 - รองรับการประเมินค่าของนิพจน์พื้นฐาน เช่น การบวก, ลบ, คูณ, และหาร
 - สามารถใช้วงเล็บเพื่อกำหนดลำดับการคำนวณได้
@@ -10,6 +10,6 @@ Write a code that use Interpreter pattern with python that have requirement belo
 - รองรับการประเมินค่าที่มีความซับซ้อนสูง เช่น นิพจน์ที่มีการรวมหลายประเภท
 5. การใช้งาน:
 - แสดงวิธีการใช้ Interpreter ในการประเมินค่าของนิพจน์ที่หลากหลาย
-Additionally, provide pytest tests ensuring:
+Additionally, provide JUnit tests ensuring:
 - 100% branch coverage.
 - 100% statement coverage.

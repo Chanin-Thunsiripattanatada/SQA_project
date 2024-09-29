@@ -1,6 +1,6 @@
 import pytest
 
-from TextRenderer_R1 import TextRenderer
+from TextRenderer_R1_code import TextRenderer
 
 @pytest.fixture
 def text_renderer():

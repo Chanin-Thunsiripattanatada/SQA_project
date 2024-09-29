@@ -28,12 +28,12 @@ class FlyweightPatternTest {
         Color color = Color.BLUE;
         ConcreteTextFormat format = new ConcreteTextFormat("Courier New", 16, true, true, false, color);
 
-        assertEquals("Courier New", format.fontFamily, "Font family should be set correctly");
-        assertEquals(16, format.fontSize, "Font size should be set correctly");
-        assertTrue(format.isBold, "Bold should be set correctly");
-        assertTrue(format.isItalic, "Italic should be set correctly");
-        assertFalse(format.isUnderline, "Underline should be set correctly"); 
-        assertEquals(color, format.color, "Color should be set correctly");
+        assertEquals("Courier New", format.getFontFamily(), "Font family should be set correctly");
+        assertEquals(16, format.getFontSize(), "Font size should be set correctly");
+        assertTrue(format.isBold(), "Bold should be set correctly");
+        assertTrue(format.isItalic(), "Italic should be set correctly");
+        assertFalse(format.isUnderline(), "Underline should be set correctly"); 
+        assertEquals(color, format.getColor(), "Color should be set correctly");
     }
 
     @Test
