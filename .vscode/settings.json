@@ -1,5 +1,11 @@
 {
     "java.project.sourcePaths": [
-        "Java/Gemini 1.5 Flash/Interpreter/round1"
+        "Java/Gemini 1.5 Pro/Interpreter",
+        "Java/Gemini 1.5 Flash/Interpreter",
+        "Java/GithubCopilot/Interpreter"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\chonl\\Downloads\\junit-platform-console-standalone-1.11.1.jar"
     ]
 }
