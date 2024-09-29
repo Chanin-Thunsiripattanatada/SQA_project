@@ -1,6 +1,9 @@
-package round2;
+package flyweight_gemini_pro_round2;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.awt.Font;
 
 class FlyweightTextRenderingTest {
 

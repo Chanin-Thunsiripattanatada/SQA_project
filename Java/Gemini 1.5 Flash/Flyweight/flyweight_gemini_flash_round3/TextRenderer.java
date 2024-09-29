@@ -1,4 +1,4 @@
-package round3;
+package flyweight_gemini_flash_round3;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;

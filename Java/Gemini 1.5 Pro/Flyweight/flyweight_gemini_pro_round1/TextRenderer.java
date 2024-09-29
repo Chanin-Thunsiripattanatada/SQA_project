@@ -1,4 +1,4 @@
-package round1;
+package flyweight_gemini_pro_round1;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;

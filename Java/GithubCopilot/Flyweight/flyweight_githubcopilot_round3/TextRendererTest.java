@@ -1,6 +1,7 @@
-package round3;
+package flyweight_githubcopilot_round3;
 
 import org.junit.jupiter.api.Test;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
 import java.io.ByteArrayOutputStream;

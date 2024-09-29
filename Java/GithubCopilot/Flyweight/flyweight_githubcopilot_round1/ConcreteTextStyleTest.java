@@ -1,4 +1,4 @@
-package round1;
+package flyweight_githubcopilot_round1;
 // TextStyleFactoryTest.java
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;

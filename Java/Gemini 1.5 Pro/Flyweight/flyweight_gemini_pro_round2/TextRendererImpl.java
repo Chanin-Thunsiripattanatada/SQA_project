@@ -1,7 +1,9 @@
-package round2;
+package flyweight_gemini_pro_round2;
+
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
+
 
 // Flyweight Factory for managing font objects
 class FontFactory {

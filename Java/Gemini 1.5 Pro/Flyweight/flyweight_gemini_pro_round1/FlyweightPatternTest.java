@@ -1,7 +1,9 @@
-package round1;
+package flyweight_gemini_pro_round1;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
+import java.awt.image.ImageObserver;
+import java.text.AttributedCharacterIterator;
 
 import static org.junit.jupiter.api.Assertions.*;
 

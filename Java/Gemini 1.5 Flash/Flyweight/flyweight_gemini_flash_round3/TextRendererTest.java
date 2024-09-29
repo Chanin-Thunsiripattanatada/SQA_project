@@ -1,6 +1,8 @@
-package round3;
+package flyweight_gemini_flash_round3;
 // JUnit Test Cases
 import org.junit.jupiter.api.Test;
+import java.awt.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TextRendererTest {

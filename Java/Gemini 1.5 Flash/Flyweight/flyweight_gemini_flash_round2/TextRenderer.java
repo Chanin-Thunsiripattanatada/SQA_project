@@ -1,4 +1,4 @@
-package round2;
+package flyweight_gemini_flash_round2;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -71,7 +71,7 @@ public class TextRenderer {
         System.out.println("Wrap Width: " + wrapWidth);
     }
 
-    private static Font getFont(Font font) {
+    public static Font getFont(Font font) {
         String fontKey = font.getName() + "-" + font.getStyle() + "-" + font.getSize();
         if (!fontCache.containsKey(fontKey)) {
             fontCache.put(fontKey, font);

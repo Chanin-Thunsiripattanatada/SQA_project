@@ -1,4 +1,4 @@
-package round2;
+package flyweight_gemini_flash_round2;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;

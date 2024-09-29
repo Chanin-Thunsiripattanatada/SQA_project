@@ -1,4 +1,4 @@
-package round3;
+package flyweight_githubcopilot_round3;
 import java.util.HashMap;
 import java.util.Map;
 

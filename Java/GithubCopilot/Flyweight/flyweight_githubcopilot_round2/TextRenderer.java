@@ -1,6 +1,7 @@
-package round2;
+package flyweight_githubcopilot_round2;
 import java.util.HashMap;
 import java.util.Map;
+
 
 // Flyweight Interface
 interface TextStyle {
